@@ -61,7 +61,7 @@ class App extends React.Component {
   getWeather = (e) => {
     e.preventDefault();
     var city = e.target.elements.city.value;
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${weather_api_key}&units=metric`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${weather_api_key}&units=metric`)
       .then(response => response.json())
       .then(data => {
         if (city) {
